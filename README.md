@@ -1,0 +1,2 @@
+# Argocd
+detail in Argocd
