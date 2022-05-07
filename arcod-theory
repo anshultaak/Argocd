@@ -1,0 +1,21 @@
+ARGO CD 
+# Argo cd is decrelative continous tool , that you can use app to install in your kubenetes culster
+USER -> GITHUB REPO -> ARGO CD -> K8s -> CLUSTER1 OR CLUSTE2
+                              OR
+USER -> ARGO CD WEB UI -> ARGO CD -> K8s -> CLUSTER1 OR CLUSTE2
+                               OR
+USER -> ARGCO CD CLI -> ARGO CD -> K8s -> CLUSTER1 OR CLUSTE2
+
+
+ARGCO CD COMPENETS
+argocd-server = its api sever, for interaction be with argo cd has to go through this api server
+Repo sever = That's communicate exernal github repo and its check changing  
+app-controller = its for maintance and it maintane state deploy service of kubenetes cluster
+redis = its for memory cache
+dex-sever = its like gateway, etranal thing attch with this
+
+manually sync
+when your push your code in github repo its store code in argc cd cache does not create deployment you have do manually go on click syc button deploymnt
+
+Automatic sync
+when your push your code in github repo its argco cd autimatically ceate deployment 
