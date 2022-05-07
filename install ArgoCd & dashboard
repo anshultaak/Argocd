@@ -1,0 +1,11 @@
+INTSALL ARGOCD WORKFLOWS = creating dashboard 
+
+kubectl create ns argo
+kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo-workflows/master/manifests/quick-start-postgres.yaml
+
+Open a port-forward so you can access the UI:
+kubectl -n argo port-forward deployment/argo-server 2746:2746
+
+# for access outside cluter you have edit argocd-server
+kubectl -n argocd edit argocd-server                           # here edit cluster ip nodeport 
+kubect -n argocd get all                                         # its all service argocd
